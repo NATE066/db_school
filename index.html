@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oro Site High School Portal</title>
+  <link rel="stylesheet" href="./design/css/bootstrap.min.css">
+  <style>
+    /* Custom Styles */
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: #f7dc6f; /* Warm Yellow for Energetic tone */
+      color: #333333; /* Dark Gray */
+    }
+
+    main {
+      flex: 1; /* Push footer to the bottom when content is short */
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #333333; /* Deep Gray */
+      font-weight: 600;
+    }
+    .navbar-brand, .nav-link {
+      color: #FFFFFF !important; /* White */
+    }
+    .nav-link {
+      transition: all 0.3s ease-in-out;
+    }
+    .nav-link:hover {
+      background-color: #FFD700; /* Golden Yellow */
+      color: #454F55 !important; /* Dark Gray */
+      border-radius: 5px;
+      font-weight: 600;
+      padding: 5px 10px;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      background-color: #f7dc6f; /* White */
+    }
+    .hero h1 {
+      color: #333333; /* Deep Gray */
+    }
+    .hero p {
+      color: #454F55; /* Dark Gray */
+      font-weight: 400;
+    }
+
+    p{
+      padding: 0px 0px 40px 0px;
+    }
+    .btn-primary {
+      background-color: #333333; /* Golden Yellow */
+      border: 1px;
+      font-weight: 600;
+      transition: all 0.3s ease-in-out;
+      color: #FFD700; 
+    }
+    .btn-primary:hover {
+      background-color: #ffc800; /* Warm Yellow */
+      color: #333333;
+      transition: all 0.3s ease-in-out;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #333333; /* Deep Gray */
+      color: #FFFFFF; /* White */
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg shadow-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <!-- SVG Logo -->
+        <img class="bi bi-school" src="./oshs.svg" alt="Logo" width="30" height="30">
+        Oro Site High School
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1>Welcome to Oro Site High School Portal</h1>
+        <p>Access your grades, stay updated, and experience seamless communication with our school portal.</p>
+        <a href="login.html" class="btn btn-primary">Get Started</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2024 STEM 12 Research Team
+  </footer>
+
+  <script src="./design/js/bootstrap.bundle.min.js"></script>
+  <script src="./design/js/bootstrap.js"></script>
+</body>
+</html>

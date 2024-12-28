@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./design/css/bootstrap.min.css">
+    <title>Oro Site High School Portal</title>
+
+    <style>
+      /* General Styles */
+      body {
+        background-color: #424242; /* Light Gray-Beige */
+        color: #333333; /* Dark Gray */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        box-sizing: border-box;
+      }
+  
+      /* Card */
+      .login-card {
+        background-color: #FFFFFF; /* White */
+        /* border: 1px solid #F2F2F2; /* Light Gray */
+        padding: 50px;
+        padding-bottom: 5;
+        width: 100%;
+        max-width: 400px;
+        
+        border-radius: 8px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        box-sizing: border-box;
+      }
+  
+      .login-card {
+        box-shadow:  
+                  0px 0px 20px 0px rgb(255, 204, 0);
+
+                  /*300px 50px rgba(255, 217, 1, 0.1), 
+                  -300px -50px rgba(255, 217, 1, 0.1),
+                  -100px 80px rgba(255, 217, 1, 0.1),
+                  100px -80px rgba(255, 217, 1, 0.1), 
+                  0px 20px rgb(255, 255, 255); /* Subtle shadow */
+}
+      .login-card form{
+        flex-grow: 1;
+        margin-bottom: 20px;
+      }
+
+      /* Logo */
+      .login-logo {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        margin-top: -10px;
+      }
+  
+      .login-logo img {
+        fill: #FFD700; /* Golden Yellow */
+        width: 100px;
+        height: 100px;
+      }
+  
+      /* Input Fields */
+      .form-control {
+        border-radius: 5px;
+        border: 1px solid #00000074;
+      }
+  
+      .form-control:focus {
+        border-color: #FFD700; /* Golden Yellow */
+        box-shadow: 0 0 4px rgba(255, 215, 0, 0.5); /* Yellow glow */
+      }
+
+      .registered-link{
+        text-align: center;
+        text-decoration: none;
+        font-size: 13px;
+      }
+
+      .registered-link a{
+        text-align: center;
+        text-decoration: none;
+        font-weight: 600;
+        color: #333333;
+      }
+
+      .registered-link a:hover{
+        text-decoration: underline;
+        transition: 1s ease;
+      }
+  
+      /* Buttons */
+      .btn-primary {
+        background-color: #ffd900eb; /* Golden Yellow */
+        border: none;
+        border-radius: 5px;
+        transition: all 0.3s ease-in-out;
+        font-weight: 600;
+        color: #333333;
+      }
+  
+      .btn-primary:hover {
+        background-color: #F7DC6F; /* Warm Yellow */
+        font-weight: 600;
+        color: #333333;
+      }
+  
+      /* Alert */
+      .alert-warning {
+        background-color: #FFF4CC; /* Light Yellow */
+        color: #333333; /* Dark Gray */
+        border: 1px solid #FFD700; /* Golden Yellow */
+      }
+
+      footer {
+      text-align: center;
+      font-weight: 600;
+      padding: 8px;
+      width: 100%;
+      background-color: #333333; /* Deep Gray */
+      color: #FFFFFF; /* White */
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      margin: 0;
+    }
+    </style>
+  </head>
+  <body>
+    
+    <div class="login-card">
+      
+      <!-- Logo -->
+      <div class="login-logo">
+        <img src="./oshs.svg" alt="logo" width="700" height="70">
+      </div>
+  
+      <!-- Alert (Initially Hidden) -->
+      <div class="alert alert-warning d-none" id="errorAlert">
+        Incorrect email or password. Please try again.
+      </div>
+  
+      <!-- Login Form -->
+      <form id="loginForm">
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingInput" placeholder="Enter your email or username" required>
+          <label for="floatingEmail or Username" class="form-label">Email or Username</label>
+          
+        </div>
+        <div class="form-floating  mb-3">
+          <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+          <label for="password" class="form-label">Password</label>
+        </div>
+        <div class="registered-link">
+          <p>Not a registered  Teacher or Student? <a href="./index.html">Go back home.</a></p>
+        </div>
+        <div class="d-grid">
+          <button type="submit" class="btn btn-primary">Login</button>
+        </div>
+        <br>
+      </form>
+
+      
+
+      <footer>
+        &copy; 2024 STEM 12 Research Team
+      </footer>
+    </div>
+  
+    <script>
+      // Mock form validation for demonstration
+      document.getElementById('loginForm').addEventListener('submit', function(e) {
+        e.preventDefault(); 
+        // Prevent form submission
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+  
+        // Simulated login validation (replace with actual backend validation)
+        if (email !== "admin" || password !== "password123") {
+          const errorAlert = document.getElementById('errorAlert');
+          errorAlert.classList.remove('d-none'); // Show warning alert
+        }
+      });
+    </script>
+      <script src="./design/js/bootstrap.bundle.min.js"></script>
+      <script src="./design/js/bootstrap.js"></script>
+</body>
+    
+</html>
